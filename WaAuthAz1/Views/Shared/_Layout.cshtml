@@ -27,6 +27,27 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav ms-auto">
+                    @if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                @User.Identity.Name
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/Account/SignOutAzure">Logout</a></li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Account/SignIn">Login</a>
+                        </li>
+                    }
+
+                </ul>
             </div>
         </div>
     </nav>
