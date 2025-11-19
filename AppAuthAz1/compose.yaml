@@ -1,0 +1,7 @@
+﻿services:
+  appauthaz1:
+    image: appauthaz1
+    build:
+      context: .
+      dockerfile: AppAuthAz1/Dockerfile
+
