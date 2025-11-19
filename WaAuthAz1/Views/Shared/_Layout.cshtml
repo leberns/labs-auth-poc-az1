@@ -36,7 +36,12 @@
                                 @User.Identity.Name
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="/Account/SignOutAzure">Logout</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignOut">Logout App</a></li>
+                                <li><a class="dropdown-item" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Logout</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignOutAzure1">Logout Azure 1</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignOutAzure2">Logout Azure 2</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignOutAzure3">Logout Azure 3</a></li>
+                                <li><a class="dropdown-item" href="/Account/SignOutAzure4">Logout Azure 4</a></li>
                             </ul>
                         </li>
                     }
